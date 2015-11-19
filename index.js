@@ -1,49 +1,79 @@
 // boolean
 
-export function isString(param) {
+'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+    value: true
+});
+exports.isString = isString;
+exports.isNumber = isNumber;
+exports.isNumeric = isNumeric;
+exports.isBoolean = isBoolean;
+exports.isDefined = isDefined;
+exports.isPrimitive = isPrimitive;
+exports.isIE = isIE;
+exports.isEmpty = isEmpty;
+exports.numberConstrain = numberConstrain;
+exports.arrayPluck = arrayPluck;
+exports.arrayUnique = arrayUnique;
+exports.arrayContains = arrayContains;
+exports.arrayFrom = arrayFrom;
+exports.arrayClean = arrayClean;
+
+function isString(param) {
     return typeof param === 'string';
 }
 
-export function isNumber(param) {
+function isNumber(param) {
     return typeof param === 'number' && isFinite(param);
-};
+}
 
-export function isNumeric(param) {
+;
+
+function isNumeric(param) {
     return !isNaN(parseFloat(param)) && isFinite(param);
-};
+}
 
-export var isArray = Array.isArray;
+;
 
-export var isObject = function() {
-    return (toString.call(null) === '[object Object]') ? function(param) {
+var isArray = Array.isArray;
+
+exports.isArray = isArray;
+var isObject = (function () {
+    return toString.call(null) === '[object Object]' ? function (param) {
         return param !== null && param !== undefined && toString.call(param) === '[object Object]' && param.ownerDocument === undefined;
-    } : function(param) {
+    } : function (param) {
         return toString.call(param) === '[object Object]';
     };
-}();
+})();
 
-export var isFunction = function() {
-    return (typeof document !== 'undefined' && typeof document.getElementsByTagName('body') === 'function') ? function(value) {
+exports.isObject = isObject;
+var isFunction = (function () {
+    return typeof document !== 'undefined' && typeof document.getElementsByTagName('body') === 'function' ? function (value) {
         return !!value && toString.call(value) === '[object Function]';
-    } : function(value) {
+    } : function (value) {
         return !!value && typeof value === 'function';
     };
-}();
+})();
 
-export function isBoolean(param) {
+exports.isFunction = isFunction;
+
+function isBoolean(param) {
     return typeof param === 'boolean';
 }
 
-export function isDefined(param) {
+function isDefined(param) {
     return typeof param !== 'undefined';
 }
 
-export function isPrimitive(param) {
+function isPrimitive(param) {
     var type = typeof param;
     return type === 'string' || type === 'number' || type === 'boolean';
-};
+}
 
-export function isIE() {
+;
+
+function isIE() {
     var ua = window.navigator.userAgent;
 
     // test values
@@ -65,7 +95,7 @@ export function isIE() {
     }
 
     var edge = ua.indexOf('Edge/');
-        if (edge > 0) {
+    if (edge > 0) {
         // IE 12 => return version number
         return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
     }
@@ -75,13 +105,14 @@ export function isIE() {
 }
 
 // dependency: isArray
-export function isEmpty(array, allowEmptyString) {
-    return (array == null) || (!allowEmptyString ? array === '' : false) || (isArray(array) && array.length === 0);
+
+function isEmpty(array, allowEmptyString) {
+    return array == null || (!allowEmptyString ? array === '' : false) || isArray(array) && array.length === 0;
 }
 
 // number
 
-export function numberConstrain(number, min, max) {
+function numberConstrain(number, min, max) {
     number = parseFloat(number);
 
     if (!isNaN(min)) {
@@ -93,19 +124,20 @@ export function numberConstrain(number, min, max) {
     return number;
 }
 
-export var numberToFixed = function() {
-    return ((0.9).toFixed() !== '1') ? function(value, precision) {
+var numberToFixed = (function () {
+    return 0.9.toFixed() !== '1' ? function (value, precision) {
         precision = precision || 0;
         var pow = math.pow(10, precision);
         return (math.round(value * pow) / pow).toFixed(precision);
-    } : function(value, precision) {
+    } : function (value, precision) {
         return value.toFixed(precision);
     };
-}();
+})();
 
+exports.numberToFixed = numberToFixed;
 // array
 
-export function arrayPluck(array, propertyName) {
+function arrayPluck(array, propertyName) {
     var newArray = [];
     var i;
     var len;
@@ -120,7 +152,7 @@ export function arrayPluck(array, propertyName) {
     return newArray;
 }
 
-export function arrayUnique(array) {
+function arrayUnique(array) {
     var newArray = [];
     var i = 0;
     var len = array.length;
@@ -137,13 +169,14 @@ export function arrayUnique(array) {
     return newArray;
 }
 
-export function arrayContains(array, item) {
+function arrayContains(array, item) {
     return Array.prototype.indexOf.call(array, item) !== -1;
 }
 
 // dependency: isArray
-export function arrayFrom(param, isNewRef) {
-    var toArray = function(iterable, start, end) {
+
+function arrayFrom(param, isNewRef) {
+    var toArray = function toArray(iterable, start, end) {
         if (!iterable || !iterable.length) {
             return [];
         }
@@ -160,7 +193,7 @@ export function arrayFrom(param, isNewRef) {
             i;
 
         start = start || 0;
-        end = end ? ((end < 0) ? iterable.length + end : end) : iterable.length;
+        end = end ? end < 0 ? iterable.length + end : end : iterable.length;
 
         for (i = start; i < end; i++) {
             array.push(iterable[i]);
@@ -174,7 +207,7 @@ export function arrayFrom(param, isNewRef) {
     }
 
     if (isArray(param)) {
-        return (isNewRef) ? slice.call(param) : param;
+        return isNewRef ? slice.call(param) : param;
     }
 
     var type = typeof param;
@@ -186,7 +219,8 @@ export function arrayFrom(param, isNewRef) {
 }
 
 // dependency: isEmpty
-export function arrayClean(array) {
+
+function arrayClean(array) {
     var results = [],
         i = 0,
         ln = array.length,
