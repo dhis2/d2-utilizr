@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/dhis2/d2-utilizr/issues"
   },
-  "homepage": "https://github.com/dhis2/d2-utilizr#readme"
+  "homepage": "https://github.com/dhis2/d2-utilizr#readme",
+  "devDependencies": {
+    "babel": "5.8.34"
+  }
 }
