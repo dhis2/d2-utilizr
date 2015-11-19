@@ -30,20 +30,20 @@ export var isFunction = function() {
     };
 }();
 
-export functionisBoolean(param) {
+export function isBoolean(param) {
     return typeof param === 'boolean';
 }
 
-export functionisDefined(param) {
+export function isDefined(param) {
     return typeof param !== 'undefined';
 }
 
-export functionisPrimitive(param) {
+export function isPrimitive(param) {
     var type = typeof param;
     return type === 'string' || type === 'number' || type === 'boolean';
 };
 
-export functionisIE() {
+export function isIE() {
     var ua = window.navigator.userAgent;
 
     // test values
