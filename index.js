@@ -43,7 +43,7 @@ export function isPrimitive(param) {
     return type === 'string' || type === 'number' || type === 'boolean';
 };
 
-export functionisIE() {
+export function isIE() {
     var ua = window.navigator.userAgent;
 
     // test values
