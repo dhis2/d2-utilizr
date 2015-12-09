@@ -1,0 +1,4 @@
+*.iml
+index.js
+!src/index.js
+node_modules
