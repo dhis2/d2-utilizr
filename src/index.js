@@ -1,4 +1,4 @@
-// boolean
+// type
 
 export function isString(param) {
     return typeof param === 'string';
