@@ -204,10 +204,10 @@ export function arrayClean(array) {
 }
 
 // dependency: isString, isNumber, isArray
-export function arraySort = function(array, direction, key, emptyFirst) {
+export function arraySort(array, direction, key, emptyFirst) {
     // supports [number], [string], [{key: number}], [{key: string}], [[string]], [[number]]
 
-    if (!isArray(array) {
+    if (!isArray(array)) {
         return;
     }
 
@@ -257,4 +257,4 @@ export function arraySort = function(array, direction, key, emptyFirst) {
     });
 
     return array;
-};
+}

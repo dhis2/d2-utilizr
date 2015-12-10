@@ -5,7 +5,7 @@
   "main": "./src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "./node_modules/babel/bin/babel.js src/index.js -o index.js"
+    "build": "./node_modules/babel-cli/bin/babel.js src/index.js -o index.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/dhis2/d2-utilizr#readme",
   "devDependencies": {
-    "babel": "6.3.13"
+    "babel-cli": "6.3.15"
   }
 }
