@@ -1,4 +1,5 @@
 *.iml
 index.js
 !src/index.js
-node_modules
+node_modules/
+lib/
