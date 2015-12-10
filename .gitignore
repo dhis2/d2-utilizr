@@ -1,5 +1,6 @@
 *.iml
 index.js
+index.js.map
 !src/index.js
 node_modules/
 lib/
