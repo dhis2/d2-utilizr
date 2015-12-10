@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/dhis2/d2-utilizr#readme",
   "devDependencies": {
-    "babel": "5.8.34"
+    "babel": "6.3.13"
   }
 }
