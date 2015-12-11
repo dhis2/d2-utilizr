@@ -120,7 +120,7 @@ export function arrayPluck(array, propertyName) {
     return newArray;
 }
 
-export function arrayUnique(array) {f
+export function arrayUnique(array) {
     var newArray = [];
     var i = 0;
     var len = array.length;
