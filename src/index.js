@@ -342,14 +342,14 @@ var cloneFn = function(item) {
         clone = [];
 
         while (i--) {
-            clone[i] = fn(item[i]);
+            clone[i] = cloneFn(item[i]);
         }
     }
     else if (type === '[object Object]' && item.constructor === Object) {
         clone = {};
 
         for (key in item) {
-            clone[key] = fn(item[key]);
+            clone[key] = cloneFn(item[key]);
         }
 
         if (enumerables) {
