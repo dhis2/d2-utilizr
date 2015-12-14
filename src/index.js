@@ -1,19 +1,24 @@
-// type
+// TYPE
 
+// isString
 export function isString(param) {
     return typeof param === 'string';
 }
 
+// isNumber
 export function isNumber(param) {
     return typeof param === 'number' && isFinite(param);
 };
 
+// isNumeric
 export function isNumeric(param) {
     return !isNaN(parseFloat(param)) && isFinite(param);
 };
 
+// isArray
 export var isArray = Array.isArray;
 
+// isObject
 export var isObject = function() {
     return (toString.call(null) === '[object Object]') ? function(param) {
         return param !== null && param !== undefined && toString.call(param) === '[object Object]' && param.ownerDocument === undefined;
@@ -22,6 +27,7 @@ export var isObject = function() {
     };
 }();
 
+// isFunction
 export var isFunction = function() {
     return (typeof document !== 'undefined' && typeof document.getElementsByTagName('body') === 'function') ? function(value) {
         return !!value && toString.call(value) === '[object Function]';
@@ -30,19 +36,28 @@ export var isFunction = function() {
     };
 }();
 
+// isBoolean
 export function isBoolean(param) {
     return typeof param === 'boolean';
 }
 
+// isDefined
 export function isDefined(param) {
     return typeof param !== 'undefined';
 }
 
+// isPrimitive
 export function isPrimitive(param) {
     var type = typeof param;
     return type === 'string' || type === 'number' || type === 'boolean';
 };
 
+// isEmpty (dependency: isArray)
+export function isEmpty(array, allowEmptyString) {
+    return (array == null) || (!allowEmptyString ? array === '' : false) || (isArray(array) && array.length === 0);
+}
+
+// isIE
 export function isIE() {
     var ua = window.navigator.userAgent;
 
@@ -74,13 +89,17 @@ export function isIE() {
     return false;
 }
 
-// dependency: isArray
-export function isEmpty(array, allowEmptyString) {
-    return (array == null) || (!allowEmptyString ? array === '' : false) || (isArray(array) && array.length === 0);
+
+// STRING
+
+// stringReplaceAll
+export function stringReplaceAll(str1, str2, ignore) {
+    return this.replace(new RegExp(str1.replace(/([\/\,\!\\\^\$\{\}\[\]\(\)\.\*\+\?\|\<\>\-\&])/g,"\\$&"),(ignore?"gi":"g")),(typeof(str2)=="string")?str2.replace(/\$/g,"$$$$"):str2);
 }
 
-// number
+// NUMBER
 
+// numberConstrain
 export function numberConstrain(number, min, max) {
     number = parseFloat(number);
 
@@ -93,6 +112,7 @@ export function numberConstrain(number, min, max) {
     return number;
 }
 
+// numberToFixed
 export var numberToFixed = function() {
     return ((0.9).toFixed() !== '1') ? function(value, precision) {
         precision = precision || 0;
@@ -103,8 +123,10 @@ export var numberToFixed = function() {
     };
 }();
 
-// array
 
+// ARRAY
+
+// arrayPluck
 export function arrayPluck(array, propertyName) {
     var newArray = [];
     var i;
@@ -120,6 +142,7 @@ export function arrayPluck(array, propertyName) {
     return newArray;
 }
 
+// arrayUnique
 export function arrayUnique(array) {
     var newArray = [];
     var i = 0;
@@ -137,11 +160,12 @@ export function arrayUnique(array) {
     return newArray;
 }
 
+// arrayContains
 export function arrayContains(array, item) {
     return Array.prototype.indexOf.call(array, item) !== -1;
 }
 
-// dependency: isArray
+// arrayFrom (dependency: isArray)
 export function arrayFrom(param, isNewRef) {
     var toArray = function(iterable, start, end) {
         if (!iterable || !iterable.length) {
@@ -185,7 +209,7 @@ export function arrayFrom(param, isNewRef) {
     return [param];
 }
 
-// dependency: isString, isArray, isObject
+// arrayTo (dependency: isString, isArray, isObject)
 export function arrayTo(param) {
     if (isArray(param)) {
         return param;
@@ -208,8 +232,7 @@ export function arrayTo(param) {
     return [];
 };
     
-
-// dependency: isEmpty
+// arrayClean (dependency: isEmpty)
 export function arrayClean(array) {
     var results = [],
         i = 0,
@@ -227,7 +250,7 @@ export function arrayClean(array) {
     return results;
 }
 
-// dependency: isString, isNumber, isArray
+// arraySort (dependency: isString, isNumber, isArray)
 export function arraySort(array, direction, key, emptyFirst) {
     // supports [number], [string], [{key: number}], [{key: string}], [[string]], [[number]]
 
@@ -281,4 +304,76 @@ export function arraySort(array, direction, key, emptyFirst) {
     });
 
     return array;
+}
+
+
+// MISC
+
+// clone
+var enumerables = function() {
+    var enu = ['valueOf', 'toLocaleString', 'toString', 'constructor'];
+
+    for (var i in { toString: 1 }) {
+        enu = null;
+    }
+
+    return enu;
+}();
+
+var cloneFn = function(item) {
+    if (item === null || item === undefined) {
+        return item;
+    }
+
+    if (item.nodeType && item.cloneNode) {
+        return item.cloneNode(true);
+    }
+
+    var type = toString.call(item),
+        i, j, k, clone, key;
+
+    if (type === '[object Date]') {
+        return new Date(item.getTime());
+    }
+
+    if (type === '[object Array]') {
+        i = item.length;
+
+        clone = [];
+
+        while (i--) {
+            clone[i] = fn(item[i]);
+        }
+    }
+    else if (type === '[object Object]' && item.constructor === Object) {
+        clone = {};
+
+        for (key in item) {
+            clone[key] = fn(item[key]);
+        }
+
+        if (enumerables) {
+            for (j = enumerables.length; j--;) {
+                k = enumerables[j];
+                if (item.hasOwnProperty(k)) {
+                    clone[k] = item[k];
+                }
+            }
+        }
+    }
+
+    return clone || item;
+};
+
+export function clone(item) {
+    return cloneFn(item);
+}
+
+// uuid
+export function uuid() {
+    var s4 = function() {
+        return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
+    };
+
+    return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();
 }
