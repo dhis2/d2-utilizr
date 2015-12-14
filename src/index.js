@@ -185,6 +185,30 @@ export function arrayFrom(param, isNewRef) {
     return [param];
 }
 
+// dependency: isString, isArray, isObject
+export function arrayTo(param) {
+    if (isArray(param)) {
+        return param;
+    }
+
+    if (isObject(param)) {
+        var a = [];        
+        for (var key in param) {
+            if (param.hasOwnProperty(key)) {
+                a.push(param[key]);
+            }
+        }
+        return a;
+    }
+
+    if (isString(param)) {
+        return param.split();
+    }
+
+    return [];
+};
+    
+
 // dependency: isEmpty
 export function arrayClean(array) {
     var results = [],
