@@ -306,6 +306,24 @@ export function arraySort(array, direction, key, emptyFirst) {
     return array;
 }
 
+// arrayReplace
+export function replace(array, index, removeCount, insert) {
+    if (insert && insert.length) {
+        if (index < array.length) {
+            array.splice.apply(array, [index, removeCount].concat(insert));
+        } else {
+            array.push.apply(array, insert);
+        }
+    } else {
+        array.splice(index, removeCount);
+    }
+    return array;
+}
+
+// arrayInsert (dependency: arrayReplace)
+export function (array, index, items) {
+    return replace(array, index, 0, items);
+}
 
 // MISC
 
