@@ -307,7 +307,7 @@ export function arraySort(array, direction, key, emptyFirst) {
 }
 
 // arrayReplace
-export function replace(array, index, removeCount, insert) {
+export function arrayReplace(array, index, removeCount, insert) {
     if (insert && insert.length) {
         if (index < array.length) {
             array.splice.apply(array, [index, removeCount].concat(insert));
@@ -321,8 +321,8 @@ export function replace(array, index, removeCount, insert) {
 }
 
 // arrayInsert (dependency: arrayReplace)
-export function (array, index, items) {
-    return replace(array, index, 0, items);
+export function arrayInsert(array, index, items) {
+    return arrayReplace(array, index, 0, items);
 }
 
 // MISC
