@@ -93,8 +93,8 @@ export function isIE() {
 // STRING
 
 // stringReplaceAll
-export function stringReplaceAll(str1, str2, ignore) {
-    return this.replace(new RegExp(str1.replace(/([\/\,\!\\\^\$\{\}\[\]\(\)\.\*\+\?\|\<\>\-\&])/g,"\\$&"),(ignore?"gi":"g")),(typeof(str2)=="string")?str2.replace(/\$/g,"$$$$"):str2);
+export function stringReplaceAll(str, matchValue, replaceValue, ignore) {
+    return str.replace(new RegExp(matchValue.replace(/([\/\,\!\\\^\$\{\}\[\]\(\)\.\*\+\?\|\<\>\-\&])/g,"\\$&"),(ignore?"gi":"g")),(typeof(replaceValue)=="string")?replaceValue.replace(/\$/g,"$$$$"):replaceValue);
 }
 
 // NUMBER
