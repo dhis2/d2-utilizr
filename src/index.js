@@ -53,8 +53,8 @@ export function isPrimitive(param) {
 };
 
 // isEmpty (dependency: isArray)
-export function isEmpty(array, allowEmptyString) {
-    return (array == null) || (!allowEmptyString ? array === '' : false) || (isArray(array) && array.length === 0);
+export function isEmpty(param, allowEmptyString) {
+    return (param == null) || (!allowEmptyString ? param === '' : false) || (isArray(param) && param.length === 0);
 }
 
 // isIE
