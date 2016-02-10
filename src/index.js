@@ -328,63 +328,8 @@ export function arrayInsert(array, index, items) {
 // MISC
 
 // clone
-var enumerables = function() {
-    var enu = ['valueOf', 'toLocaleString', 'toString', 'constructor'];
-
-    for (var i in { toString: 1 }) {
-        enu = null;
-    }
-
-    return enu;
-}();
-
-var cloneFn = function(item) {
-    if (item === null || item === undefined) {
-        return item;
-    }
-
-    if (item.nodeType && item.cloneNode) {
-        return item.cloneNode(true);
-    }
-
-    var type = toString.call(item),
-        i, j, k, clone, key;
-
-    if (type === '[object Date]') {
-        return new Date(item.getTime());
-    }
-
-    if (type === '[object Array]') {
-        i = item.length;
-
-        clone = [];
-
-        while (i--) {
-            clone[i] = cloneFn(item[i]);
-        }
-    }
-    else if (type === '[object Object]' && item.constructor === Object) {
-        clone = {};
-
-        for (key in item) {
-            clone[key] = cloneFn(item[key]);
-        }
-
-        if (enumerables) {
-            for (j = enumerables.length; j--;) {
-                k = enumerables[j];
-                if (item.hasOwnProperty(k)) {
-                    clone[k] = item[k];
-                }
-            }
-        }
-    }
-
-    return clone || item;
-};
-
 export function clone(item) {
-    return cloneFn(item);
+    return JSON.parse(JSON.stringify(item));
 }
 
 // uuid
