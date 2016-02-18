@@ -5,3 +5,4 @@ index.js.map
 node_modules/
 lib/
 coverage/
+npm-debug.log
