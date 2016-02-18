@@ -1,45 +1,50 @@
-// TYPE
+import isEmpty from './isEmpty';
+import isArray from './isArray';
+import isObject from './isObject';
+import isString from './isString';
 
-// isString
-export function isString(param) {
-    return typeof param === 'string';
+export {default as isEmpty} from './isEmpty';
+export {default as isArray} from './isArray';
+// Type Checks
+
+/**
+ * Check if the value is a String
+ *
+ * @param param Value to be checked
+ * @returns {boolean} Returns true when the `param` is a String
+ */
+export {default as isString} from './isString';
+
+/**
+ * Check if a value is a number
+ *
+ * @param param Value that will be checked if it is a number
+ * @returns {boolean} Returns true when param is a Number otherwise false
+ */
+export function isNumber(param) {
+    return typeof param === 'number' && Number.isFinite(param);
 }
 
-// isNumber
-export function isNumber(param) {
-    return typeof param === 'number' && isFinite(param);
-};
-
-// isNumeric
+/**
+ * Check if a value is numeric
+ *
+ * @param param Value to be checked
+ * @returns {boolean} Returns true when the `param` is a numeric value
+ */
 export function isNumeric(param) {
-    return !isNaN(parseFloat(param)) && isFinite(param);
-};
+    if (typeof param === 'symbol') {
+        return false;
+    }
 
-// isArray
-export var isArray = Array.isArray;
+    return !isNaN(parseFloat(param)) && global.isFinite(param);
+}
 
-// isObject
-export var isObject = function() {
-    return (toString.call(null) === '[object Object]') ? function(param) {
-        return param !== null && param !== undefined && toString.call(param) === '[object Object]' && param.ownerDocument === undefined;
-    } : function(param) {
-        return toString.call(param) === '[object Object]';
-    };
-}();
+export {default as isObject} from './isObject';
 
-// isFunction
-export var isFunction = function() {
-    return (typeof document !== 'undefined' && typeof document.getElementsByTagName('body') === 'function') ? function(value) {
-        return !!value && toString.call(value) === '[object Function]';
-    } : function(value) {
-        return !!value && typeof value === 'function';
-    };
-}();
+export {default as isFunction} from './isFunction';
 
 // isBoolean
-export function isBoolean(param) {
-    return typeof param === 'boolean';
-}
+export {default as isBoolean} from './isBoolean';
 
 // isDefined
 export function isDefined(param) {
@@ -50,78 +55,22 @@ export function isDefined(param) {
 export function isPrimitive(param) {
     var type = typeof param;
     return type === 'string' || type === 'number' || type === 'boolean';
-};
-
-// isEmpty (dependency: isArray)
-export function isEmpty(param, allowEmptyString) {
-    return (param == null) || (!allowEmptyString ? param === '' : false) || (isArray(param) && param.length === 0);
 }
 
-// isIE
-export function isIE() {
-    var ua = window.navigator.userAgent;
-
-    // test values
-    // IE 10: ua = 'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)';
-    // IE 11: ua = 'Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv:11.0) like Gecko';
-    // IE 12 / Spartan: ua = 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.71 Safari/537.36 Edge/12.0';
-
-    var msie = ua.indexOf('MSIE ');
-    if (msie > 0) {
-        // IE 10 or older => return version number
-        return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
-    }
-
-    var trident = ua.indexOf('Trident/');
-    if (trident > 0) {
-        // IE 11 => return version number
-        var rv = ua.indexOf('rv:');
-        return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
-    }
-
-    var edge = ua.indexOf('Edge/');
-        if (edge > 0) {
-        // IE 12 => return version number
-        return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
-    }
-
-    // other browser
-    return false;
-}
-
+export {default as isIE} from './isIE';
 
 // STRING
 
 // stringReplaceAll
 export function stringReplaceAll(str, matchValue, replaceValue, ignore) {
-    return str.replace(new RegExp(matchValue.replace(/([\/\,\!\\\^\$\{\}\[\]\(\)\.\*\+\?\|\<\>\-\&])/g,"\\$&"),(ignore?"gi":"g")),(typeof(replaceValue)=="string")?replaceValue.replace(/\$/g,"$$$$"):replaceValue);
+    return str.replace(new RegExp(matchValue.replace(/([\/\,\!\\\^\$\{\}\[\]\(\)\.\*\+\?\|\<\>\-\&])/g, "\\$&"), (ignore ? "gi" : "g")), (typeof(replaceValue) == "string") ? replaceValue.replace(/\$/g, "$$$$") : replaceValue);
 }
 
 // NUMBER
 
-// numberConstrain
-export function numberConstrain(number, min, max) {
-    number = parseFloat(number);
+export {default as numberConstrain} from './numberConstrain';
 
-    if (!isNaN(min)) {
-        number = Math.max(number, min);
-    }
-    if (!isNaN(max)) {
-        number = Math.min(number, max);
-    }
-    return number;
-}
-
-// numberToFixed
-export var numberToFixed = function() {
-    return ((0.9).toFixed() !== '1') ? function(value, precision) {
-        precision = precision || 0;
-        var pow = math.pow(10, precision);
-        return (math.round(value * pow) / pow).toFixed(precision);
-    } : function(value, precision) {
-        return value.toFixed(precision);
-    };
-}();
+export {default as numberToFixed} from './numberToFixed';
 
 
 // ARRAY
@@ -143,6 +92,7 @@ export function arrayPluck(array, propertyName) {
 }
 
 // arrayUnique
+// TODO: Could be written as `return [...(new Set(array))];`
 export function arrayUnique(array) {
     var newArray = [];
     var i = 0;
@@ -172,17 +122,19 @@ export function arrayFrom(param, isNewRef) {
             return [];
         }
 
+        // FIXME: This will never be called as the if check excludes type string
         if (typeof iterable === 'string') {
             iterable = iterable.split('');
         }
 
-        if (supportsSliceOnNodeList) {
+        if (supportsSliceOnNodeList) { // FIXME: This does not exist
             return slice.call(iterable, start || 0, end || iterable.length);
         }
 
         var array = [],
             i;
 
+        // FIXME: start and end are always 0 and iterable.length
         start = start || 0;
         end = end ? ((end < 0) ? iterable.length + end : end) : iterable.length;
 
@@ -198,11 +150,12 @@ export function arrayFrom(param, isNewRef) {
     }
 
     if (isArray(param)) {
-        return (isNewRef) ? slice.call(param) : param;
+        return (isNewRef) ? Array.prototype.slice.call(param) : param;
     }
 
     var type = typeof param;
     if (param && param.length !== undefined && type !== 'string' && (type !== 'function' || !param.apply)) {
+        // TODO: This function call will always fail because of supportsSliceOnNodeList being undefined
         return toArray(param);
     }
 
@@ -216,7 +169,7 @@ export function arrayTo(param) {
     }
 
     if (isObject(param)) {
-        var a = [];        
+        var a = [];
         for (var key in param) {
             if (param.hasOwnProperty(key)) {
                 a.push(param[key]);
@@ -230,13 +183,14 @@ export function arrayTo(param) {
     }
 
     return [];
-};
-    
+}
+
 // arrayClean (dependency: isEmpty)
+// TODO: Could be written as `array.filter(isEmpty);`
 export function arrayClean(array) {
     var results = [],
         i = 0,
-        ln = array.length,
+        ln = array.length,// TODO: throws if the error is undefined
         item;
 
     for (; i < ln; i++) {
@@ -261,7 +215,6 @@ export function arraySort(array, direction, key, emptyFirst) {
     key = !!key || isNumber(key) ? key : 'name';
 
     array.sort( function(a, b) {
-
         // if object, get the property values
         if (isObject(a) && isObject(b)) {
             a = a[key];
@@ -279,7 +232,7 @@ export function arraySort(array, direction, key, emptyFirst) {
             a = a.toLowerCase();
             b = b.toLowerCase();
 
-            if (direction === 'DESC') {
+            if (direction === 'DESC') { // TODO: Case sensitive really required? Why not allow `desc`, `Desc` or `dEsC`?
                 return a < b ? 1 : (a > b ? -1 : 0);
             }
             else {
@@ -328,6 +281,7 @@ export function arrayInsert(array, index, items) {
 // MISC
 
 // clone
+// TODO: Throw an error on empty `item` (Unexpected token u)
 export function clone(item) {
     return JSON.parse(JSON.stringify(item));
 }
