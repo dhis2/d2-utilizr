@@ -1,4 +1,10 @@
-// numberToFixed
+/**
+ * Fixes the number to a certain amount of decimals
+ *
+ * @param {Number} value The value to apply the function to
+ * @param {Number} [precision=0] The amount of decimal digits to fix to
+ * @returns {String} The "fixed" number with the specified amount of decimals
+ */
 const numberToFixed = function() {
     function fixedToFixed(value, precision) {
         precision = precision || 0;
