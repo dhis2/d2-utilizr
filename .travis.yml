@@ -1,0 +1,22 @@
+sudo: false
+language: node_js
+node_js:
+- 5.1.1
+script:
+- npm run travis
+- npm run docs
+- rm -rf .git
+- cd docs
+- git init
+- git config user.name "Travis CI"
+- git config user.email "travis@dhis2.org"
+- git remote add origin https://github.com/dhis2/d2-utilizr.git
+- git add .; git add -u .
+- git commit -m "Docs update"
+- git push --force --quiet "https://${GITHUB_TOKEN}@${GH_REF}" master:gh-pages > /dev/null
+  2>&1
+env:
+  global:
+  - GH_REF: github.com/dhis2/d2-utilizr.git
+  - secure: XZVphOB08GkY099hDFVkYtpPGcugByXyUaX/DibK4O05p1KMESDYcgqmdQc0IAVwgYa96f/Fcez08u10rDKAOnYYwA6HwE3FaVn7Zq8PZImsiHCczpyaydQse4JhObM19MIpfP+HwTwW4zy4TM8zZYvgzI5V4wF+rAs1jyqAns9MXJqcmHr8B6p/jfkIVscUv/TRMUKNB+kCbnTPzZKpcbhWwasI2gizyGDdl+2MJu1DZWnJbnik+7I1b8ZFFxpBNr1U5Cvk+XncnKKlq6q8QexTxTNxwfr4PvLDmezIZDLCp2ZOkBdAvcghXKGJStVr4IU+d9rxkDPR65VSipmK3xIYPHmKqfhaJYKSsnGmME9lTDIghgli+LJ5teJl9BCEc4970/cNip6qKEN+/W23XAwgoRwrWWKyQAy8gHZMOxGNYpqnzXJgHFJXrriZY1njbO8I2HIimM4O3UlsIt4ATtPmc7etYgPgoKYEs/5WohwJHWPfBdY0LX9os+raxmeyfRBr2Fw0KToE337nbaP9NHpXiLjICQcmD2JySBeIvDIyRYYade10XEmsd+ju0Z3jSpJu5DQ4VMKi2OQ48pKn8bwhO02ekO8oyZkecqwjUFUxs0Q4iKkVx/StxuUtwof5lmRrKkg6JSLZ+k81TF/LYiY2Ju4DLgiQBy63iuAZMso=
+  - secure: nkvsLinVZUjXd2bLcC8IA48VNDCgYJrARLaJ+ydvq2qLHIT4KY3aGITZNCFiDaLUlZ7LNVTuPY84LfkO3392TbkvwH+EmGSOL8eO5pWQ7SfnNi/GuNAY59Ru6kRdAeoWOiRezHaFRrbNIqDO+S6gZ8+rfGENfSYEQmICIsfjfmgkW2BOCJEFEEHDQjZOC4Z6HgsPh4Sf40VmX1sR/E/KRIE5gVigwRQbucpE86N223u/L41Ygluqg+A9AIE7GsMWM9NdjDGIWJK9PiWQw18jKj9j0iyoH1Og0wCRaUa96etTiueGDMllpq6DFgeOONjmPWg6SjFZNv6LEikZNSGm8hKy/3qBoh5b8zKg2Hox578UGH5RMCRfq7Vot+BiAkadv5gJUQBRQme88pfak5Y/dkKUmMxCz6Iyw1ZYRjx26Ia64HledMSrbtzAGeMaylGUSdk6jGh/Zz1kMhBQZ7/g0nqjDLil+bfu5tId8g81nJLzSezttjQubJuIGHKZwGA42L6O9S4LntQD5Txl/N3tj9sDRU3W7i6gxScN7nF9vpi7F1XNyqJb0gKX5kiPiMNDZUMNfPDq5xCbe/XySzyrN3tUi31wUzaCRj53EY1rfXKfJIIlPrFQTDhJNR4d4tmysvdi9FES+8anjIeqazuH9ZeDa37WDRglAhSJ7fn8QTg=

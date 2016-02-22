@@ -4,3 +4,6 @@ index.js.map
 !src/index.js
 node_modules/
 lib/
+coverage/
+npm-debug.log
+docs
