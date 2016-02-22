@@ -9,7 +9,8 @@
     "test-watch": "mocha --reporter spec --compilers js:babel-core/register --require config/test-env-setup.js config/sandbox-setup.js --recursive test --watch",
     "build": "babel src/ --out-dir lib --source-maps",
     "travis": "npm run coverage",
-    "posttravis": "codeclimate-test-reporter < ./coverage/lcov.info"
+    "posttravis": "codeclimate-test-reporter < ./coverage/lcov.info",
+    "docs": "rm ./.babelrc && documentation build --github --output docs --format html && git checkout .babelrc"
   },
   "repository": {
     "type": "git",
@@ -28,6 +29,7 @@
     "babel-preset-stage-2": "^6.3.13",
     "chai": "^3.5.0",
     "codeclimate-test-reporter": "^0.3.1",
+    "documentation": "^4.0.0-beta",
     "isparta": "^4.0.0",
     "mocha": "^2.4.5",
     "sinon": "^1.17.3",

@@ -10,6 +10,7 @@ export {default as isArray} from './isArray';
 /**
  * Check if the value is a String
  *
+ * @name isString
  * @param param Value to be checked
  * @returns {boolean} Returns true when the `param` is a String
  */
@@ -25,25 +26,9 @@ export function isNumber(param) {
     return typeof param === 'number' && Number.isFinite(param);
 }
 
-/**
- * Check if a value is numeric
- *
- * @param param Value to be checked
- * @returns {boolean} Returns true when the `param` is a numeric value
- */
-export function isNumeric(param) {
-    if (typeof param === 'symbol') {
-        return false;
-    }
-
-    return !isNaN(parseFloat(param)) && global.isFinite(param);
-}
-
+export {default as isNumeric} from './isNumeric';
 export {default as isObject} from './isObject';
-
 export {default as isFunction} from './isFunction';
-
-// isBoolean
 export {default as isBoolean} from './isBoolean';
 
 // isDefined
@@ -110,12 +95,27 @@ export function arrayUnique(array) {
     return newArray;
 }
 
-// arrayContains
+/**
+ * Check if an array contains a specified item
+ *
+ * @param {Array} array The array to check for the item
+ * @param {*} item The item to look for in the array
+ * @returns {boolean} Returns true when the item is found, otherwise false
+ */
 export function arrayContains(array, item) {
     return Array.prototype.indexOf.call(array, item) !== -1;
 }
 
 // arrayFrom (dependency: isArray)
+/**
+ * Create an array from a value
+ *
+ * @param {*} param Value to transform to an array
+ * @param {boolean} [isNewRef] Should return a new reference than the one from the `param` value
+ * @returns {Array} The resulting array
+ *
+ * @requires isArray
+ */
 export function arrayFrom(param, isNewRef) {
     var toArray = function(iterable, start, end) {
         if (!iterable || !iterable.length) {
