@@ -4,6 +4,13 @@ node_js:
 - 5.1.1
 script:
 - npm run travis
+- npm run docs
+- rm -rf .git
+- cd docs
+- git init
+- git remote add origin https://github.com/dhis2/d2-utilizr.git
+- git commit -am "Docs update"
+- git push origin HEAD:gh-pages -u --force
 env:
   global:
     secure: XZVphOB08GkY099hDFVkYtpPGcugByXyUaX/DibK4O05p1KMESDYcgqmdQc0IAVwgYa96f/Fcez08u10rDKAOnYYwA6HwE3FaVn7Zq8PZImsiHCczpyaydQse4JhObM19MIpfP+HwTwW4zy4TM8zZYvgzI5V4wF+rAs1jyqAns9MXJqcmHr8B6p/jfkIVscUv/TRMUKNB+kCbnTPzZKpcbhWwasI2gizyGDdl+2MJu1DZWnJbnik+7I1b8ZFFxpBNr1U5Cvk+XncnKKlq6q8QexTxTNxwfr4PvLDmezIZDLCp2ZOkBdAvcghXKGJStVr4IU+d9rxkDPR65VSipmK3xIYPHmKqfhaJYKSsnGmME9lTDIghgli+LJ5teJl9BCEc4970/cNip6qKEN+/W23XAwgoRwrWWKyQAy8gHZMOxGNYpqnzXJgHFJXrriZY1njbO8I2HIimM4O3UlsIt4ATtPmc7etYgPgoKYEs/5WohwJHWPfBdY0LX9os+raxmeyfRBr2Fw0KToE337nbaP9NHpXiLjICQcmD2JySBeIvDIyRYYade10XEmsd+ju0Z3jSpJu5DQ4VMKi2OQ48pKn8bwhO02ekO8oyZkecqwjUFUxs0Q4iKkVx/StxuUtwof5lmRrKkg6JSLZ+k81TF/LYiY2Ju4DLgiQBy63iuAZMso=
