@@ -1,4 +1,4 @@
-import {arrayContains} from '../src';
+import arrayContains from '../src/arrayContains';
 
 describe('arrayContains', () => {
     it('should return true if the item is in the array', () => {

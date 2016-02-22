@@ -1,4 +1,4 @@
-import {isPrimitive} from '../src/index';
+import isPrimitive from '../src/isPrimitive';
 
 describe('isPrimitive', () => {
     it('should return false for an object', () => {

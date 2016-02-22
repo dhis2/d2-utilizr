@@ -1,4 +1,4 @@
-import {arrayPluck} from '../src';
+import arrayPluck from '../src/arrayPluck';
 
 describe('arrayPluck', () => {
     let sourceArray;

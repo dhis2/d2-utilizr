@@ -1,7 +1,17 @@
 /**
+ * Check if the users browser is a version of Internet Explorer
  *
- * @param [ua] The user agent string
- * @returns {boolean|string}
+ * @param [ua] The users user-agent string.
+ * @returns {boolean|number} Returns the version number (10, 11, 12) when the browser is IE, otherwise `false`
+ *
+ * @example
+ * // When using IE10
+ * isIE(); // Returns: 10
+ *
+ * // When using FireFox
+ * isIE(); // Returns: false
+ *
+ * TODO: It is not very good practice to return two different types of values from a function. Perhaps we can return `true` on IE and have a secondary function to get the version?
  */
 export default function isIE(ua = window.navigator.userAgent) {
     // test values

@@ -1,4 +1,4 @@
-import {isDefined} from '../src/index';
+import isDefined from '../src/isDefined';
 
 describe('isDefined', () => {
     it('should return true for an object', () => {

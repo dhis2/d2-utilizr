@@ -1,4 +1,4 @@
-import {uuid} from '../src';
+import uuid from '../src/uuid';
 
 describe('uuid', () => {
     const uuidRegExp = /[A-z0-9]{8}\-[A-z0-9]{4}\-[A-z0-9]{4}\-[A-z0-9]{4}\-[A-z0-9]{12}/;

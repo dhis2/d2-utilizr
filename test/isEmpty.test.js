@@ -9,6 +9,10 @@ describe('isEmpty', () => {
         expect(isEmpty(null)).to.be.true;
     });
 
+    it('should return false for an empty object', () => {
+        expect(isEmpty({})).to.be.false;
+    });
+
     it('should return true for an empty string', () => {
         expect(isEmpty('')).to.be.true;
     });

@@ -1,4 +1,4 @@
-import {arrayInsert} from '../src';
+import arrayInsert from '../src/arrayInsert';
 
 describe('arrayInsert', () => {
     let sourceArray;

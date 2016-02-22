@@ -1,4 +1,4 @@
-import {stringReplaceAll} from '../src';
+import stringReplaceAll from '../src/stringReplaceAll';
 
 describe('stringReplaceAll', () => {
     it('should return replace all the occurances in the given value', () => {

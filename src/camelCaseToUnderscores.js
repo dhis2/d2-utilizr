@@ -1,8 +1,13 @@
 /**
  * Convert a camelCase word to its underscore_case equivalent
  *
- * @param {String} wordToTransform
+ * @name camelCaseToUnderscores
+ * @param {string} wordToTransform The string to transform.
  * @returns {string} The wordToTransform as a underscore separated string eg. camelCase -> camel_case
+ *
+ * @example
+ * const word = 'HelloMyAmazingWorld';
+ * camelCaseToUnderscores(word); // Returns: 'hello_my_amazing_world'
  */
 export default function camelCaseToUnderscores(wordToTransform) {
     return wordToTransform

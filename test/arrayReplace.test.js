@@ -1,4 +1,4 @@
-import {arrayReplace} from '../src';
+import arrayReplace from '../src/arrayReplace';
 
 describe('arrayReplace', () => {
     let sourceArray;

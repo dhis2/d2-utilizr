@@ -1,4 +1,4 @@
-import {arrayClean} from '../src';
+import arrayClean from '../src/arrayClean';
 
 describe('arrayClean', () => {
     it('should remove the empty values from the array', () => {

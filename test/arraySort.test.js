@@ -1,4 +1,4 @@
-import {arraySort} from '../src';
+import arraySort from '../src/arraySort';
 
 describe('arraySort', () => {
     let sourceArray;

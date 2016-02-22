@@ -1,4 +1,4 @@
-import {numberToFixed} from '../src';
+import numberToFixed from '../src/numberToFixed';
 
 describe('numberToFixed', () => {
     let numObj;

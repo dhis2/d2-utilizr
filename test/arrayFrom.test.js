@@ -1,4 +1,4 @@
-import {arrayFrom} from '../src';
+import arrayFrom from '../src/arrayFrom';
 
 describe('arrayFrom', () => {
     it('should return a split string', () => {

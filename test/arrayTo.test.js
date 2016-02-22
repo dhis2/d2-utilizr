@@ -1,4 +1,4 @@
-import {arrayTo} from '../src';
+import arrayTo from '../src/arrayTo';
 
 describe('arrayTo', () => {
     it('should return the passed array', () => {
