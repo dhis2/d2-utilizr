@@ -5,6 +5,7 @@ import isString from './isString';
 
 export {default as isEmpty} from './isEmpty';
 export {default as isArray} from './isArray';
+export {default as camelCaseToUnderscores} from './camelCaseToUnderscores';
 // Type Checks
 
 /**
@@ -19,6 +20,7 @@ export {default as isString} from './isString';
 /**
  * Check if a value is a number
  *
+ * @name isNumber
  * @param param Value that will be checked if it is a number
  * @returns {boolean} Returns true when param is a Number otherwise false
  */

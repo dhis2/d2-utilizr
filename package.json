@@ -10,7 +10,7 @@
     "build": "babel src/ --out-dir lib --source-maps",
     "travis": "npm run coverage",
     "posttravis": "codeclimate-test-reporter < ./coverage/lcov.info",
-    "docs": "rm ./.babelrc && documentation build --github --output docs --format html && git checkout .babelrc"
+    "docs": "rm ./.babelrc && documentation build --github --output docs --format html && git checkout .babelrc && open ./docs/index.html"
   },
   "repository": {
     "type": "git",
