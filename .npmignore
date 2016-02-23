@@ -10,4 +10,4 @@ docs
 .gitignore
 .babelrc
 .travis.yml
-
+config
