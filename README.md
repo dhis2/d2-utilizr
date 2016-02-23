@@ -7,3 +7,7 @@
 [![npm version](https://badge.fury.io/js/d2-utilizr.svg)](https://badge.fury.io/js/d2-utilizr)
 [![Dependency Status](https://david-dm.org/dhis2/d2-utilizr.svg)](https://david-dm.org/dhis2/d2-utilizr)
 [![devDependency Status](https://david-dm.org/dhis2/d2-utilizr/dev-status.svg)](https://david-dm.org/dhis2/d2-utilizr#info=devDependencies)
+
+==
+
+Basic documentation can for now be found at [dhis2.github.io/d2-utilizr/](https://dhis2.github.io/d2-utilizr/).  
