@@ -1,4 +1,4 @@
-import {default as _isObject} from 'lodash.isobject';
+import _isObject from 'lodash.isobject';
 import isArray from './isArray';
 
 /**

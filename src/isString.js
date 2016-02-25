@@ -1,3 +1,5 @@
+import isString from 'lodash.isstring';
+
 /**
  * Check if the value is a String
  *
@@ -5,4 +7,4 @@
  * @param param Value to be checked
  * @returns {boolean} Returns true when the `param` is a String
  */
-export {default as default} from 'lodash.isstring';
+export default isString;
