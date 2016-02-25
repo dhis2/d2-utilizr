@@ -36,6 +36,7 @@ export {default as arrayClean} from './arrayClean';
 export {default as arraySort} from './arraySort';
 export {default as arrayReplace} from './arrayReplace';
 export {default as arrayInsert} from './arrayInsert';
+export {default as arrayDifference} from './arrayDifference';
 export {default as isArrayOfStrings} from './isArrayOfStrings';
 
 // Misc
