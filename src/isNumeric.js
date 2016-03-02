@@ -4,7 +4,7 @@
  * @param param Value to be checked
  * @returns {boolean} Returns true when the `param` is a numeric value
  */
-export function isNumeric(param) {
+export default function isNumeric(param) {
     if (typeof param === 'symbol') {
         return false;
     }

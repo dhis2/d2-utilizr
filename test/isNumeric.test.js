@@ -1,4 +1,4 @@
-import {isNumeric} from '../src/isNumeric';
+import isNumeric from '../src/isNumeric';
 
 describe('isNumeric', () => {
     it('should return true for a number string', () => {
