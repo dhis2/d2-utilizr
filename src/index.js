@@ -24,6 +24,7 @@ export {default as numberToFixed} from './numberToFixed';
 
 // String functions
 export {default as stringReplaceAll} from './stringReplaceAll';
+export {default as stringTrim} from './stringTrim';
 export {default as camelCaseToUnderscores} from './camelCaseToUnderscores';
 
 // Array functions
