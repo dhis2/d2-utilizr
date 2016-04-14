@@ -11,5 +11,5 @@
  * person1 !== person2 // Returns:  true
  */
 export default function clone(item) {
-    return JSON.parse(JSON.stringify(item));
+    return window.JSON.parse(window.JSON.stringify(item));
 }
