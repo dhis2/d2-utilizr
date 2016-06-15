@@ -1,3 +1,4 @@
+import numberIsFinite from './numberIsFinite';
 /**
  * Check if a value is a number
  *
@@ -6,5 +7,5 @@
  * @returns {boolean} Returns true when param is a Number otherwise false
  */
 export default function isNumber(param) {
-    return typeof param === 'number' && Number.isFinite(param);
+    return typeof param === 'number' && numberIsFinite(param);
 }

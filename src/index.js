@@ -21,6 +21,7 @@ export {default as isNumeric} from './isNumeric';
 // Number functions
 export {default as numberConstrain} from './numberConstrain';
 export {default as numberToFixed} from './numberToFixed';
+export {default as numberIsFinite} from './numberIsFinite';
 
 // String functions
 export {default as stringReplaceAll} from './stringReplaceAll';
