@@ -14,6 +14,7 @@ import {arrayClean} from '../src';
 import {arraySort} from '../src';
 import {arrayReplace} from '../src';
 import {arrayInsert} from '../src';
+import {objectClean} from '../src';
 import {isIE, clone, uuid, isArrayOfStrings, isIterable} from '../src';
 
 describe('Utilizr index', () => {
@@ -140,6 +141,12 @@ describe('Utilizr index', () => {
     describe('isIterable', () => {
         it('should be the isIterable function', () => {
             expect(isIterable).to.equal(require('../src/isIterable').default);
+        });
+    });
+
+    describe('objectClean', () => {
+        it('should be the objectClean function', () => {
+            expect(objectClean).to.equal(require('../src/objectClean').default);
         });
     });
 });

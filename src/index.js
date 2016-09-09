@@ -43,6 +43,9 @@ export {default as arrayMin} from './arrayMin';
 export {default as arrayMax} from './arrayMax';
 export {default as isArrayOfStrings} from './isArrayOfStrings';
 
+// Object function
+export {default as objectClean} from './objectClean';
+
 // Misc
 export {default as isIE} from './isIE';
 export {default as clone} from './clone';
