@@ -4,7 +4,6 @@ describe('objectClean', () => {
     const sourceObject = {a: 1, b: undefined, c: null, d: [], e: new Map()};
 
     it('should remove properties that are empty according to isEmpty or the passed function', () => {
-
         expect(objectClean(sourceObject)).to.deep.equal({a: 1});
     });
 
