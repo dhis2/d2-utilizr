@@ -3,7 +3,7 @@ language: node_js
 node_js:
 - 5.1.1
 before_script: 
-- npm install codeclimate-test-reporter
+- npm install -g codeclimate-test-reporter
 script:
 - npm run travis
 - npm run docs
