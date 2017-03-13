@@ -17,11 +17,13 @@ export {default as isNumber} from './isNumber';
 export {default as isString} from './isString';
 export {default as isArray} from './isArray';
 export {default as isNumeric} from './isNumeric';
+export {default as isInteger} from './isInteger';
 
 // Number functions
 export {default as numberConstrain} from './numberConstrain';
 export {default as numberToFixed} from './numberToFixed';
 export {default as numberIsFinite} from './numberIsFinite';
+export {default as numberDecimals} from './numberDecimals';
 
 // String functions
 export {default as stringReplaceAll} from './stringReplaceAll';
