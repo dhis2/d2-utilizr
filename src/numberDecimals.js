@@ -4,7 +4,7 @@ import isInteger from './isInteger';
 /**
  * Returns the number of decimal places in a number
  *
- * @param param Number to be checked
+ * @param {Number} number The number to be checked
  * @returns {Number} The number of decimal places in the given number
  */
 export default function numberDecimals(number) {
