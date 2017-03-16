@@ -1,7 +1,7 @@
 {
   "name": "d2-utilizr",
   "version": "0.2.12",
-  "description": "",
+  "description": "d2-utilizr",
   "main": "lib/index.js",
   "scripts": {
     "coverage": "nyc --include src --require babel-register --require babel-polyfill mocha --reporter dot --require config/test-env-setup.js config/sandbox-setup.js --recursive test && nyc report --reporter=lcov",
