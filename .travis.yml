@@ -4,18 +4,6 @@ node_js:
 - 5.1.1
 script:
 - npm run travis
-- npm run docs
-- rm -rf .git
-- cd docs
-- git init
-- git config user.name "Travis CI"
-- git config user.email "travis@dhis2.org"
-- git remote add origin https://github.com/dhis2/d2-utilizr.git
-- git add .; git add -u .
-- git commit -m "Docs update"
-- git push --force --quiet "https://${GITHUB_TOKEN}@${GH_REF}" master:gh-pages > /dev/null
-  2>&1
-- cd ..
 env:
   global:
   - GH_REF: github.com/dhis2/d2-utilizr.git
@@ -32,3 +20,14 @@ deploy:
   on:
     tags: true
     repo: dhis2/d2-utilizr
+after_deploy:
+- npm run docs
+- rm -rf .git
+- cd docs
+- git init
+- git config user.name "Travis CI"
+- git config user.email "travis@dhis2.org"
+- git remote add origin https://github.com/dhis2/d2-utilizr.git
+- git add .; git add -u .
+- git commit -m "Docs update"
+- git push --force --quiet "https://${GITHUB_TOKEN}@${GH_REF}" master:gh-pages > /dev/null 2>&1
