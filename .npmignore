@@ -2,12 +2,11 @@
 index.js
 index.js.map
 !src/index.js
-node_modules/
-test/
+config/
 coverage/
-npm-debug.log
-docs
+docs/
+test/
 .gitignore
 .babelrc
 .travis.yml
-config
+.nyc_output
