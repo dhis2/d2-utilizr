@@ -16,13 +16,28 @@
  * arrayRepeat(values, 3, true) // returns: [1, 1, 1, 2, 2, 2, 3, 3, 3]
  */
 export default function arrayRepeat(array, n=1, byIndex=false) {
+    
     if (typeof array === 'undefined') {
         throw `Cannot repeat array of type undefined`;
     }
 
+    let newArray = [];
+
     if (byIndex) {
-        return [].concat.apply([], array.map((item, i) => Array(n).fill(array[i])));
+
+        for (let i=0; i<array.length; i++) {            
+            for (let j = 0; j < n; j++) {
+                newArray.push(array[i]);
+            }
+        }
+        
+        return newArray
     }
-    return [].concat.apply([], Array.apply(null, Array(n)).map(() => array));
+
+    for (let i=0; i<n; i++) {
+        newArray.push(...array);
+    }
+
+    return newArray
 };
 

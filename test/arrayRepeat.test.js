@@ -19,6 +19,10 @@ describe('arrayRepeat', () => {
         expect(arrayRepeat(sourceArray)).to.deep.equal([1, 2, 3]);
     });
 
+    it('should return original array if undefined as number is passed', () => {
+        expect(arrayRepeat(sourceArray, undefined)).to.deep.equal([1, 2, 3]);
+    });
+
     it('should return an empty array if 0 is passed', () => {
         expect(arrayRepeat(sourceArray, 0)).to.deep.equal([]);
     });
