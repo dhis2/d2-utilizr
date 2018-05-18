@@ -1,0 +1,3611 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <title>d2-utilizr 0.2.16 | Documentation</title>
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <link href='assets/bass.css' type='text/css' rel='stylesheet' />
+  <link href='assets/style.css' type='text/css' rel='stylesheet' />
+  <link href='assets/github.css' type='text/css' rel='stylesheet' />
+</head>
+<body class='documentation'>
+  <div class='max-width-4 mx-auto'>
+    <div class='clearfix md-mxn2'>
+      <div class='fixed xs-hide fix-3 overflow-auto max-height-100'>
+        <div class='py1 px2'>
+          <h3 class='mb0 no-anchor'>d2-utilizr</h3>
+          <div class='mb1'><code>0.2.16</code></div>
+          <input
+            placeholder='Filter'
+            id='filter-input'
+            class='col12 block input'
+            type='text' />
+          <div id='toc'>
+            <ul class='list-reset h5 py1-ul'>
+              
+                
+                <li><a
+                  href='#arrayclean'
+                  class="">
+                  arrayClean
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#arraycontains'
+                  class="">
+                  arrayContains
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#arraydifference'
+                  class="">
+                  arrayDifference
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#arrayfrom'
+                  class="">
+                  arrayFrom
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#arrayinsert'
+                  class="">
+                  arrayInsert
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#arraymax'
+                  class="">
+                  arrayMax
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#arraymin'
+                  class="">
+                  arrayMin
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#arraypluck'
+                  class="">
+                  arrayPluck
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#arrayrepeat'
+                  class="">
+                  arrayRepeat
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#arrayreplace'
+                  class="">
+                  arrayReplace
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#arrayto'
+                  class="">
+                  arrayTo
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#arrayunique'
+                  class="">
+                  arrayUnique
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#camelcasetounderscores'
+                  class="">
+                  camelCaseToUnderscores
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#clone'
+                  class="">
+                  clone
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#isarray'
+                  class="">
+                  isArray
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#isarrayofstrings'
+                  class="">
+                  isArrayOfStrings
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#isboolean'
+                  class="">
+                  isBoolean
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#isdefined'
+                  class="">
+                  isDefined
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#isempty'
+                  class="">
+                  isEmpty
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#isfunction'
+                  class="">
+                  isFunction
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#isie'
+                  class="">
+                  isIE
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#isinteger'
+                  class="">
+                  isInteger
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#isiterable'
+                  class="">
+                  isIterable
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#isnumber'
+                  class="">
+                  isNumber
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#isnumeric'
+                  class="">
+                  isNumeric
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#isobject'
+                  class="">
+                  isObject
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#isprimitive'
+                  class="">
+                  isPrimitive
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#isstring'
+                  class="">
+                  isString
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#numberconstrain'
+                  class="">
+                  numberConstrain
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#numberdecimals'
+                  class="">
+                  numberDecimals
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#numberisfinite'
+                  class="">
+                  numberIsFinite
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#numbertofixed'
+                  class="">
+                  numberToFixed
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#objectapplyif'
+                  class="">
+                  objectApplyIf
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#cleanobject'
+                  class="">
+                  cleanObject
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#stringreplaceall'
+                  class="">
+                  stringReplaceAll
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#stringtrim'
+                  class="">
+                  stringTrim
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#uuid'
+                  class="">
+                  uuid
+                  
+                </a>
+                
+                </li>
+              
+            </ul>
+          </div>
+          <div class='mt1 h6 quiet'>
+            <a href='http://documentation.js.org/reading-documentation.html'>Need help reading this?</a>
+          </div>
+        </div>
+      </div>
+      <div class='fix-margin-3'>
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='arrayclean'>
+      arrayClean
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/dhis2/d2-utilizr/blob/d833328e7dc5e2525242b050c856060e418e02a1/src/arrayClean.js#L21-L36'>
+      <span>src/arrayClean.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Cleans the given array of <em>empty</em> values</p>
+
+
+  <div class='pre p1 fill-light mt0'>arrayClean(array: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>array</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    The array to be 
+<em>cleaned</em>
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>:
+        The clean array
+
+      
+    
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Throws</div>
+    <ul>
+      
+        <li><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError">TypeError</a>: When the passed array is not actually an array.
+</li>
+      
+    </ul>
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> sourceArray = [<span class="hljs-literal">undefined</span>, <span class="hljs-literal">null</span>, <span class="hljs-literal">true</span>, <span class="hljs-string">''</span>, {}];
+arrayClean(sourceArray); <span class="hljs-comment">// Returns: [true, {}]</span></pre>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>arrayClean() <span class="hljs-comment">// throws: Cannot read property 'length' of undefined</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='arraycontains'>
+      arrayContains
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/dhis2/d2-utilizr/blob/d833328e7dc5e2525242b050c856060e418e02a1/src/arrayContains.js#L8-L10'>
+      <span>src/arrayContains.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Check if an array contains a specified item</p>
+
+
+  <div class='pre p1 fill-light mt0'>arrayContains(array: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, item: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>array</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    The array to check for the item
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>item</span> <code class='quiet'>(any)</code>
+	    The item to look for in the array
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        Returns true when the item is found, otherwise false
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='arraydifference'>
+      arrayDifference
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/dhis2/d2-utilizr/blob/d833328e7dc5e2525242b050c856060e418e02a1/src/arrayDifference.js#L19-L25'>
+      <span>src/arrayDifference.js</span>
+      </a>
+    
+  </div>
+  
+
+  
+
+  <div class='pre p1 fill-light mt0'>arrayDifference(array1: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, array2: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, biDirectional: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>array1</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>array2</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>biDirectional</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>)</code>
+	    False returns A-B while true returns A-B concat B-A
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>:
+        
+
+      
+    
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Throws</div>
+    <ul>
+      
+        <li><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError">TypeError</a>: When 
+<code>filter</code>
+ can not be found on 
+<code>array</code>
+. This generally happens when the array is 
+<code>null</code>
+ or 
+<code>undefined</code>
+</li>
+      
+    </ul>
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>];
+<span class="hljs-keyword">const</span> b = [<span class="hljs-number">1</span>, <span class="hljs-number">3</span>];
+difference(a, b) <span class="hljs-comment">// returns: [2]</span>
+difference(a, b, <span class="hljs-literal">true</span>) <span class="hljs-comment">// returns: [2, 3]</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='arrayfrom'>
+      arrayFrom
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/dhis2/d2-utilizr/blob/d833328e7dc5e2525242b050c856060e418e02a1/src/arrayFrom.js#L12-L56'>
+      <span>src/arrayFrom.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Create an array from a value</p>
+
+
+  <div class='pre p1 fill-light mt0'>arrayFrom(param: any, isNewRef: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>param</span> <code class='quiet'>(any)</code>
+	    Value to transform to an array
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>isNewRef</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?)</code>
+	    Should return a new reference than the one from the 
+<code>param</code>
+ value
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>:
+        The resulting array
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='arrayinsert'>
+      arrayInsert
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/dhis2/d2-utilizr/blob/d833328e7dc5e2525242b050c856060e418e02a1/src/arrayInsert.js#L15-L17'>
+      <span>src/arrayInsert.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Insert a value into an array</p>
+
+
+  <div class='pre p1 fill-light mt0'>arrayInsert(array: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, index: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, items: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>array</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    The array to insert the items into
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>index</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    The index where to insert the values
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>items</span> <code class='quiet'>(any)</code>
+	    The item(s) to insert
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>:
+        The resulting array with the inserted 
+<code>items</code>
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> sourceArray = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">10</span>];
+sourceArray, <span class="hljs-literal">undefined</span>, [<span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>, <span class="hljs-string">'c'</span>]); <span class="hljs-comment">// Returns: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'a', 'b', 'c']</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='arraymax'>
+      arrayMax
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/dhis2/d2-utilizr/blob/d833328e7dc5e2525242b050c856060e418e02a1/src/arrayMax.js#L16-L38'>
+      <span>src/arrayMax.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Return the highest value (number) in the given array</p>
+
+
+  <div class='pre p1 fill-light mt0'>arrayMax(array: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, comparisonFn: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>array</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    The array to be scanned
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>comparisonFn</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>:
+        The highest value
+
+      
+    
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Throws</div>
+    <ul>
+      
+        <li><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError">TypeError</a>: When the passed array is not actually an array.
+</li>
+      
+    </ul>
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> sourceArray = [<span class="hljs-number">1</span>,<span class="hljs-number">3</span>,<span class="hljs-number">2</span>];
+arrayMax(sourceArray); <span class="hljs-comment">// Returns: 3</span></pre>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>arrayClean() <span class="hljs-comment">// throws: Cannot read property 'length' of undefined</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='arraymin'>
+      arrayMin
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/dhis2/d2-utilizr/blob/d833328e7dc5e2525242b050c856060e418e02a1/src/arrayMin.js#L16-L38'>
+      <span>src/arrayMin.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Return the lowest value (number) in the given array</p>
+
+
+  <div class='pre p1 fill-light mt0'>arrayMin(array: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, comparisonFn: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>array</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    The array to be scanned
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>comparisonFn</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>:
+        The lowest value
+
+      
+    
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Throws</div>
+    <ul>
+      
+        <li><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError">TypeError</a>: When the passed array is not actually an array.
+</li>
+      
+    </ul>
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> sourceArray = [<span class="hljs-number">3</span>,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>];
+arrayMax(sourceArray); <span class="hljs-comment">// Returns: 1</span></pre>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>arrayClean() <span class="hljs-comment">// throws: Cannot read property 'length' of undefined</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='arraypluck'>
+      arrayPluck
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/dhis2/d2-utilizr/blob/d833328e7dc5e2525242b050c856060e418e02a1/src/arrayPluck.js#L21-L34'>
+      <span>src/arrayPluck.js</span>
+      </a>
+    
+  </div>
+  
+
+  
+
+  <div class='pre p1 fill-light mt0'>arrayPluck(array: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, propertyName: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>array</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>propertyName</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>))</code>
+	    The property of the
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>:
+        
+
+      
+    
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Throws</div>
+    <ul>
+      
+        <li><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError">TypeError</a>: When the 
+<code>propertyName</code>
+ can not be found on an item in the 
+<code>array</code>
+. This generally happens when a value in the array is 
+<code>null</code>
+ or 
+<code>undefined</code>
+</li>
+      
+    </ul>
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> values = [{<span class="hljs-attr">name</span>: <span class="hljs-string">'John'</span>}, {<span class="hljs-attr">name</span>: <span class="hljs-string">'James'</span>}];
+arrayPluck(values, <span class="hljs-string">'name'</span>) <span class="hljs-comment">// returns: ['John', 'James']</span></pre>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> values = [{<span class="hljs-attr">name</span>: <span class="hljs-string">'John'</span>}, {}, {<span class="hljs-attr">name</span>: <span class="hljs-string">'James'</span>}];
+arrayPluck(values, <span class="hljs-string">'name'</span>) <span class="hljs-comment">// returns: ['John', undefined, 'James']</span></pre>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> values = [<span class="hljs-literal">undefined</span>, {<span class="hljs-attr">name</span>: <span class="hljs-string">'James'</span>}];
+arrayPluck(values, <span class="hljs-string">'name'</span>) <span class="hljs-comment">// throws: Cannot read property 'name' of undefined</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='arrayrepeat'>
+      arrayRepeat
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/dhis2/d2-utilizr/blob/d833328e7dc5e2525242b050c856060e418e02a1/src/arrayRepeat.js#L18-L42'>
+      <span>src/arrayRepeat.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Repeats content of array by structure or by index, returns flattened array.</p>
+
+
+  <div class='pre p1 fill-light mt0'>arrayRepeat(array: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a>, n: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, byIndex: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>array</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>n</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>
+            = <code>1</code>)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>byIndex</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>
+            = <code>false</code>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> values = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
+arrayRepeat(values, <span class="hljs-number">3</span>) <span class="hljs-comment">// returns: [1, 2, 3, 1, 2, 3, 1, 2, 3]</span></pre>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> values = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
+arrayRepeat(values, <span class="hljs-number">3</span>, <span class="hljs-literal">true</span>) <span class="hljs-comment">// returns: [1, 1, 1, 2, 2, 2, 3, 3, 3]</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='arrayreplace'>
+      arrayReplace
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/dhis2/d2-utilizr/blob/d833328e7dc5e2525242b050c856060e418e02a1/src/arrayReplace.js#L14-L25'>
+      <span>src/arrayReplace.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Replace values in an array with given values or remove values from an array.</p>
+
+
+  <div class='pre p1 fill-light mt0'>arrayReplace(array: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, index: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, removeCount: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, insert: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>array</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    The array where the values should be replaced
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>index</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    The index in the array where to start the replacement
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>removeCount</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    The number of items to remove
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>insert</span> <code class='quiet'>(any)</code>
+	    The item(s) to be inserted
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>:
+        The array with the replaced values
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> sourceArray = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">10</span>];
+arrayReplace(sourceArray, <span class="hljs-number">0</span>, <span class="hljs-number">5</span>, [<span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>, <span class="hljs-string">'c'</span>, <span class="hljs-string">'d'</span>]); <span class="hljs-comment">// Returns: ['a', 'b', 'c', 'd', 6, 7, 8, 9, 10]</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='arrayto'>
+      arrayTo
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/dhis2/d2-utilizr/blob/d833328e7dc5e2525242b050c856060e418e02a1/src/arrayTo.js#L25-L45'>
+      <span>src/arrayTo.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Create an array from the passed <code>param</code>. (When the value is an object only takes the iterable properties from the object (not its prototypes))</p>
+
+
+  <div class='pre p1 fill-light mt0'>arrayTo(param: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>param</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>))</code>
+	    The value to transform to an array
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>:
+        Returns the 
+<code>param</code>
+ transformed into an array, or an empty array of the value can not be transformed.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>arrayTo(<span class="hljs-string">'myData'</span>) <span class="hljs-comment">// Returns: ['myData']</span></pre>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> sourceObject = {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">'ANC First Visit'</span>,
+    <span class="hljs-attr">shortName</span>: <span class="hljs-string">'ANC1'</span>,
+    <span class="hljs-attr">level</span>: <span class="hljs-number">1</span>,
+};
+arrayTo(sourceObject); <span class="hljs-comment">// Returns: ['ANC First Visit', 'ANC1', 1]</span></pre>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>arrayTo(<span class="hljs-literal">null</span>); <span class="hljs-comment">// Returns: []</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='arrayunique'>
+      arrayUnique
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/dhis2/d2-utilizr/blob/d833328e7dc5e2525242b050c856060e418e02a1/src/arrayUnique.js#L23-L39'>
+      <span>src/arrayUnique.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Creates an array of unique values from the array passed. This function does not do a <em>deep</em> compare.
+Objects with the same values will therefore not be filtered.</p>
+
+
+  <div class='pre p1 fill-light mt0'>arrayUnique(array: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>array</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    The array to create the array of uniques from
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>:
+        The array containing the unique values
+
+      
+    
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Throws</div>
+    <ul>
+      
+        <li><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypeError">TypeError</a>: Is thrown when the argument passed is not an 
+<code>array</code>
+</li>
+      
+    </ul>
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> sourceArray = [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>, <span class="hljs-number">3</span>];
+arrayUnique(sourceArray); <span class="hljs-comment">// returns: [1, 2, 3, 4]</span></pre>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> A = {<span class="hljs-attr">name</span>: <span class="hljs-string">'A'</span>};
+<span class="hljs-keyword">const</span> B = {<span class="hljs-attr">name</span>: <span class="hljs-string">'B'</span>};
+arrayUnique([A, A, B, B]); <span class="hljs-comment">// Returns: [{name: 'A'}, {name: 'B'}]</span></pre>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> sourceArray = [{<span class="hljs-attr">name</span>: <span class="hljs-string">'A'</span>}, {<span class="hljs-attr">name</span>: <span class="hljs-string">'B'</span>}, {<span class="hljs-attr">name</span>: <span class="hljs-string">'B'</span>}];
+arrayUnique(sourceArray); <span class="hljs-comment">// Returns: [{name: 'A'}, {name: 'B'}, {name: 'B'}]</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='camelcasetounderscores'>
+      camelCaseToUnderscores
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/dhis2/d2-utilizr/blob/d833328e7dc5e2525242b050c856060e418e02a1/src/camelCaseToUnderscores.js#L12-L16'>
+      <span>src/camelCaseToUnderscores.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Convert a camelCase word to its underscore_case equivalent</p>
+
+
+  <div class='pre p1 fill-light mt0'>camelCaseToUnderscores(wordToTransform: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>wordToTransform</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    The string to transform.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
+        The wordToTransform as a underscore separated string eg. camelCase -> camel_case
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> word = <span class="hljs-string">'HelloMyAmazingWorld'</span>;
+camelCaseToUnderscores(word); <span class="hljs-comment">// Returns: 'hello_my_amazing_world'</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='clone'>
+      clone
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/dhis2/d2-utilizr/blob/d833328e7dc5e2525242b050c856060e418e02a1/src/clone.js#L13-L15'>
+      <span>src/clone.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Create a clone a value</p>
+
+
+  <div class='pre p1 fill-light mt0'>clone(item: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>item</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> person1 = {<span class="hljs-attr">name</span>: <span class="hljs-string">'John'</span>};
+<span class="hljs-keyword">const</span> person2 = clone(person1); <span class="hljs-comment">// Returns {name: 'John'}</span>
+<span class="hljs-comment">// but</span>
+person1 !== person2 <span class="hljs-comment">// Returns:  true</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='isarray'>
+      isArray
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/dhis2/d2-utilizr/blob/d833328e7dc5e2525242b050c856060e418e02a1/src/isArray.js#L12-L12'>
+      <span>src/isArray.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Check if the value is an Array</p>
+
+
+  <div class='pre p1 fill-light mt0'>isArray</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>param</span> <code class='quiet'>(any)</code>
+	    Value to be checked
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        Returns true when the 
+<code>param</code>
+ is an Array
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>isArray([]); <span class="hljs-comment">// Returns: true</span>
+isArray({}); <span class="hljs-comment">// Returns: false</span>
+isArray(<span class="hljs-string">'Hello'</span>); <span class="hljs-comment">// Returns: false</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='isarrayofstrings'>
+      isArrayOfStrings
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/dhis2/d2-utilizr/blob/d833328e7dc5e2525242b050c856060e418e02a1/src/isArrayOfStrings.js#L14-L16'>
+      <span>src/isArrayOfStrings.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Check if an array consists of strings</p>
+
+
+  <div class='pre p1 fill-light mt0'>isArrayOfStrings(arrayToCheck: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>arrayToCheck</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    The array to be checked for string values
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        True when the array contains just string otherwise false
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>isArrayOfStrings([<span class="hljs-string">'Mark'</span>, <span class="hljs-string">'John'</span>]) <span class="hljs-comment">// Returns: true</span>
+isArrayOfStrings([{<span class="hljs-attr">name</span>: <span class="hljs-string">'Mark'</span>}, {<span class="hljs-attr">name</span>: <span class="hljs-string">'John'</span>}]) <span class="hljs-comment">// Returns: false</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='isboolean'>
+      isBoolean
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/dhis2/d2-utilizr/blob/d833328e7dc5e2525242b050c856060e418e02a1/src/isBoolean.js#L10-L10'>
+      <span>src/isBoolean.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Check if a value is a boolean value <code>true</code> or <code>false</code></p>
+
+
+  <div class='pre p1 fill-light mt0'>isBoolean</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>param</span> <code class='quiet'>(any)</code>
+	    The value to check for boolean type
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        Returns 
+<code>true</code>
+ when the value is a boolean otherwise 
+<code>false</code>
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='isdefined'>
+      isDefined
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/dhis2/d2-utilizr/blob/d833328e7dc5e2525242b050c856060e418e02a1/src/isDefined.js#L7-L9'>
+      <span>src/isDefined.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Check if <code>param</code> is defined.</p>
+
+
+  <div class='pre p1 fill-light mt0'>isDefined(param: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>param</span> <code class='quiet'>(any)</code>
+	    The value to check
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        Returns 
+<code>false</code>
+ when 
+<code>param</code>
+ is 
+<code>undefined</code>
+ otherwise true.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='isempty'>
+      isEmpty
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/dhis2/d2-utilizr/blob/d833328e7dc5e2525242b050c856060e418e02a1/src/isEmpty.js#L19-L24'>
+      <span>src/isEmpty.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Check if a value is concidered <em>empty</em>. An <em>empty</em> value is an empty <code>Set</code>, <code>Map</code> or <code>Array</code>.
+Depending on if the <code>allowEmptyString</code> flag, empty strings are also considered <em>empty</em></p>
+
+
+  <div class='pre p1 fill-light mt0'>isEmpty(param: any, allowEmptyString: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>param</span> <code class='quiet'>(any)</code>
+	    Value to check
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>allowEmptyString</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>)</code>
+	    When set to true an empty string will not be considered 
+<em>empty</em>
+.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        Returns 
+<code>true</code>
+ when the value is 
+<em>empty</em>
+, otherwise false
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>isEmpty(<span class="hljs-string">''</span>); <span class="hljs-comment">// Returns: true</span>
+isEmpty(<span class="hljs-string">''</span>, <span class="hljs-literal">true</span>); <span class="hljs-comment">// Returns: false</span>
+isEmpty(<span class="hljs-literal">null</span>); <span class="hljs-comment">// Returns: true</span>
+isEmpty(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>()); <span class="hljs-comment">// Returns: true</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='isfunction'>
+      isFunction
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/dhis2/d2-utilizr/blob/d833328e7dc5e2525242b050c856060e418e02a1/src/isFunction.js#L10-L10'>
+      <span>src/isFunction.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Check if the value is a Function</p>
+
+
+  <div class='pre p1 fill-light mt0'>isFunction</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>param</span> <code class='quiet'>(any)</code>
+	    Value to be checked
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        Returns true when the 
+<code>param</code>
+ is a Function
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='isie'>
+      isIE
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/dhis2/d2-utilizr/blob/d833328e7dc5e2525242b050c856060e418e02a1/src/isIE.js#L16-L43'>
+      <span>src/isIE.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Check if the users browser is a version of Internet Explorer</p>
+
+
+  <div class='pre p1 fill-light mt0'>isIE(ua: any): (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>ua</span> <code class='quiet'>(any)</code>
+	    The users user-agent string.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>:
+        Returns the version number (10, 11, 12) when the browser is IE, otherwise 
+<code>false</code>
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-comment">// When using IE10</span>
+isIE(); <span class="hljs-comment">// Returns: 10</span>
+
+<span class="hljs-comment">// When using FireFox</span>
+isIE(); <span class="hljs-comment">// Returns: false</span>
+
+TODO: It is not very good practice to <span class="hljs-keyword">return</span> two different types <span class="hljs-keyword">of</span> values <span class="hljs-keyword">from</span> a <span class="hljs-function"><span class="hljs-keyword">function</span>. <span class="hljs-title">Perhaps</span> <span class="hljs-title">we</span> <span class="hljs-title">can</span> <span class="hljs-title">return</span> `<span class="hljs-title">true</span>` <span class="hljs-title">on</span> <span class="hljs-title">IE</span> <span class="hljs-title">and</span> <span class="hljs-title">have</span> <span class="hljs-title">a</span> <span class="hljs-title">secondary</span> <span class="hljs-title">function</span> <span class="hljs-title">to</span> <span class="hljs-title">get</span> <span class="hljs-title">the</span> <span class="hljs-title">version</span>?</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='isinteger'>
+      isInteger
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/dhis2/d2-utilizr/blob/d833328e7dc5e2525242b050c856060e418e02a1/src/isInteger.js#L19-L21'>
+      <span>src/isInteger.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Check if a value is an integer</p>
+
+
+  <div class='pre p1 fill-light mt0'>isInteger(param: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>param</span> <code class='quiet'>(any)</code>
+	    Value that will be checked if it is an integer
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        Returns 
+<code>true</code>
+ when param is a integer otherwise false
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>isInteger(<span class="hljs-number">17</span>); <span class="hljs-comment">// Returns: true</span></pre>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>isInteger(<span class="hljs-number">0xFF</span>); <span class="hljs-comment">// Returns: true</span></pre>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>isInteger(<span class="hljs-number">-17</span>); <span class="hljs-comment">// Returns: true</span></pre>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>isInteger(<span class="hljs-number">2e-3</span>); <span class="hljs-comment">// Returns: false</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='isiterable'>
+      isIterable
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/dhis2/d2-utilizr/blob/d833328e7dc5e2525242b050c856060e418e02a1/src/isIterable.js#L23-L25'>
+      <span>src/isIterable.js</span>
+      </a>
+    
+  </div>
+  
+
+  
+
+  <div class='pre p1 fill-light mt0'>isIterable(checkForIterator: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>checkForIterator</span> <code class='quiet'>(any)</code>
+	    The value that should be checked
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        Returns 
+<code>true</code>
+ when the value is iterable, otherwise false.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>isIterable(<span class="hljs-string">'My value'</span>); <span class="hljs-comment">// Returns:  true</span></pre>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>isIterable([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]); <span class="hljs-comment">// Returns: true</span></pre>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>isIterable({}); <span class="hljs-comment">// Returns: false</span></pre>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">let</span> iterableObject = {
+    [<span class="hljs-built_in">Symbol</span>.iterator]: <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {}
+};
+isIterable(iterableObject); <span class="hljs-comment">// Returns: true</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='isnumber'>
+      isNumber
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/dhis2/d2-utilizr/blob/d833328e7dc5e2525242b050c856060e418e02a1/src/isNumber.js#L9-L11'>
+      <span>src/isNumber.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Check if a value is a number</p>
+
+
+  <div class='pre p1 fill-light mt0'>isNumber(param: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>param</span> <code class='quiet'>(any)</code>
+	    Value that will be checked if it is a number
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        Returns true when param is a Number otherwise false
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='isnumeric'>
+      isNumeric
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/dhis2/d2-utilizr/blob/d833328e7dc5e2525242b050c856060e418e02a1/src/isNumeric.js#L7-L13'>
+      <span>src/isNumeric.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Check if a value is numeric</p>
+
+
+  <div class='pre p1 fill-light mt0'>isNumeric(param: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>param</span> <code class='quiet'>(any)</code>
+	    Value to be checked
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        Returns true when the 
+<code>param</code>
+ is a numeric value
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='isobject'>
+      isObject
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/dhis2/d2-utilizr/blob/d833328e7dc5e2525242b050c856060e418e02a1/src/isObject.js#L10-L12'>
+      <span>src/isObject.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Check if the value is an Object</p>
+
+
+  <div class='pre p1 fill-light mt0'>isObject(param: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>param</span> <code class='quiet'>(any)</code>
+	    Value to be checked
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        Returns true when the 
+<code>param</code>
+ is an Object
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='isprimitive'>
+      isPrimitive
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/dhis2/d2-utilizr/blob/d833328e7dc5e2525242b050c856060e418e02a1/src/isPrimitive.js#L7-L10'>
+      <span>src/isPrimitive.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Check if a value is a <em>primitive</em> (string, number, boolean)</p>
+
+
+  <div class='pre p1 fill-light mt0'>isPrimitive(param: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>param</span> <code class='quiet'>(any)</code>
+	    Value to be checked for a primitive type definition.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        Returns 
+<code>true</code>
+ if the value is a primitive, otherwise 
+<code>false</code>
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='isstring'>
+      isString
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/dhis2/d2-utilizr/blob/d833328e7dc5e2525242b050c856060e418e02a1/src/isString.js#L10-L10'>
+      <span>src/isString.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Check if the value is a String</p>
+
+
+  <div class='pre p1 fill-light mt0'>isString</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>param</span> <code class='quiet'>(any)</code>
+	    Value to be checked
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        Returns true when the 
+<code>param</code>
+ is a String
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='numberconstrain'>
+      numberConstrain
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/dhis2/d2-utilizr/blob/d833328e7dc5e2525242b050c856060e418e02a1/src/numberConstrain.js#L9-L19'>
+      <span>src/numberConstrain.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Constrains the value between the passed min and max</p>
+
+
+  <div class='pre p1 fill-light mt0'>numberConstrain(number: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>, min: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>, max: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>): (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a> | any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>number</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
+	    The value to be constrained
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>min</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
+	    The minumum number that the value should be within
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>max</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
+	    The maximum number that the value should be within
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a> | any)</code>:
+        The resulting number
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='numberdecimals'>
+      numberDecimals
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/dhis2/d2-utilizr/blob/d833328e7dc5e2525242b050c856060e418e02a1/src/numberDecimals.js#L10-L20'>
+      <span>src/numberDecimals.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Returns the number of decimal places in a number</p>
+
+
+  <div class='pre p1 fill-light mt0'>numberDecimals(number: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>number</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
+	    The number to be checked
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></code>:
+        The number of decimal places in the given number
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='numberisfinite'>
+      numberIsFinite
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/dhis2/d2-utilizr/blob/d833328e7dc5e2525242b050c856060e418e02a1/src/numberIsFinite.js#L7-L9'>
+      <span>src/numberIsFinite.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Check if a number is finite</p>
+
+
+  <div class='pre p1 fill-light mt0'>numberIsFinite</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>param</span> <code class='quiet'>(any)</code>
+	    Number to be checked
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        Returns true when the 
+<code>param</code>
+ is a finite number
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='numbertofixed'>
+      numberToFixed
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/dhis2/d2-utilizr/blob/d833328e7dc5e2525242b050c856060e418e02a1/src/numberToFixed.js#L8-L25'>
+      <span>src/numberToFixed.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Fixes the number to a certain amount of decimals</p>
+
+
+  <div class='pre p1 fill-light mt0'>numberToFixed</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>value</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
+	    The value to apply the function to
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>precision</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>
+            = <code>0</code>)</code>
+	    The amount of decimal digits to fix to
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code>:
+        The "fixed" number with the specified amount of decimals
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='objectapplyif'>
+      objectApplyIf
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/dhis2/d2-utilizr/blob/d833328e7dc5e2525242b050c856060e418e02a1/src/objectApplyIf.js#L13-L25'>
+      <span>src/objectApplyIf.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Applies properties from "config" if they are undefined in "object.</p>
+
+
+  <div class='pre p1 fill-light mt0'>objectApplyIf(object: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>, config: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>object</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    The object to receive properties
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>config</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    The object to pass properties
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>:
+        The object that may have received properties
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">let</span> object = {<span class="hljs-attr">id</span>: <span class="hljs-number">1</span>}
+<span class="hljs-keyword">const</span> config = {<span class="hljs-attr">id</span>: <span class="hljs-number">2</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">'Name'</span>}
+objectApplyIf(object, config); <span class="hljs-comment">// returns: {id: 1, name: 'Name'}</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='cleanobject'>
+      cleanObject
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/dhis2/d2-utilizr/blob/d833328e7dc5e2525242b050c856060e418e02a1/src/objectClean.js#L15-L24'>
+      <span>src/objectClean.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Applies properties from "config" if they are undefined in "object.</p>
+
+
+  <div class='pre p1 fill-light mt0'>cleanObject(object: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>, isEmptyFn: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>object</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    The object to be cleaned
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>isEmptyFn</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>
+            = <code>isEmpty</code>)</code>
+	    Optional isEmpty function
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>:
+        A new cleaned object
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">let</span> object = {<span class="hljs-attr">id</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">name</span>: <span class="hljs-literal">undefined</span>}
+objectClean(object); <span class="hljs-comment">// returns: {id: 1}</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='stringreplaceall'>
+      stringReplaceAll
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/dhis2/d2-utilizr/blob/d833328e7dc5e2525242b050c856060e418e02a1/src/stringReplaceAll.js#L10-L12'>
+      <span>src/stringReplaceAll.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Replace all occurrences of the <code>matchValue</code> within the <code>str</code> parameter.</p>
+
+
+  <div class='pre p1 fill-light mt0'>stringReplaceAll(str: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, matchValue: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, replaceValue: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>), ignore: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>): (XML | void | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>str</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    The string to operate on
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>matchValue</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    The value to match on
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>replaceValue</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>))</code>
+	    The value to replace the matches with
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>ignore</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>)</code>
+	    Case sensitivity ignore flag. Pass 
+<code>true</code>
+ to ignore case. (Defaults to 
+<code>false</code>
+)
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>(XML | void | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | any)</code>:
+        The resulting string.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='stringtrim'>
+      stringTrim
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/dhis2/d2-utilizr/blob/d833328e7dc5e2525242b050c856060e418e02a1/src/stringTrim.js#L7-L9'>
+      <span>src/stringTrim.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Removes all spaces before first after last text char.</p>
+
+
+  <div class='pre p1 fill-light mt0'>stringTrim(str: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>str</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    The string to operate on
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
+        The resulting string.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='uuid'>
+      uuid
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/dhis2/d2-utilizr/blob/d833328e7dc5e2525242b050c856060e418e02a1/src/uuid.js#L8-L14'>
+      <span>src/uuid.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Generates a universally unique identifier</p>
+
+
+  <div class='pre p1 fill-light mt0'>uuid(): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
+        The uuid
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+      </div>
+    </div>
+  </div>
+  <script src='assets/anchor.js'></script>
+  <script src='assets/site.js'></script>
+</body>
+</html>
