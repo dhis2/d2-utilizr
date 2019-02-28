@@ -5,7 +5,7 @@
 [![Test Coverage](https://codeclimate.com/github/dhis2/d2-utilizr/badges/coverage.svg)](https://codeclimate.com/github/dhis2/d2-utilizr/coverage)
 [![npm version](https://badge.fury.io/js/d2-utilizr.svg)](https://badge.fury.io/js/d2-utilizr)
 [![Dependency Status](https://david-dm.org/dhis2/d2-utilizr.svg)](https://david-dm.org/dhis2/d2-utilizr)
-[![devDependency Status](https://david-dm.org/dhis2/d2-utilizr/dev-status.svg)](https://david-dm.org/dhis2/d2-utilizr#info=devDependencies)
+[![devDependency Status](https://david-dm.org/dhis2/d2-utilizr/dev-status.svg)](https://david-dm.org/dhis2/d2-utilizr#info=devDependencies) [![Greenkeeper badge](https://badges.greenkeeper.io/dhis2/d2-utilizr.svg)](https://greenkeeper.io/)
 
 Utility library for developing [DHIS2](http://www.dhis2.org) applications.
 
